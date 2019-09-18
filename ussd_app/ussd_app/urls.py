@@ -15,11 +15,11 @@ Including another URLconf
 """
 from ussd.views import AfricasTalkingUssdGateway
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^africastalking_gateway',
-        AfricasTalkingUssdGateway.as_view(),
-        name='africastalking_url'),
+    re_path(r'^africastalking_gateway',
+            AfricasTalkingUssdGateway.as_view(),
+            name='africastalking_url'),
 ]

@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 
+DEFAULT_USSD_SCREEN_JOURNEY = os.path.join(BASE_DIR, 'screen.yaml')
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
